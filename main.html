@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine Proposal</title>
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="heart" style="top: 10%; left: 10%;">❤</div>
+    <div class="heart" style="top: 25%; left: 80%;">❤</div>
+    <div class="heart" style="top: 70%; left: 15%;">❤</div>
+    <div class="heart" style="top: 85%; left: 85%;">❤</div>
+    <div class="heart" style="top: 50%; left: 50%;">❤</div>
+
+    <button class="home-btn" id="homeBtn">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+        </svg>
+    </button>
+
+    <div class="wrapper" id="envelope">
+        <div class="lid one"></div>
+        <div class="lid two"></div>
+        <div class="envelope"></div>
+        <div class="letter">
+            <div class="carousel" id="carousel">
+                <img src="./assets/images/1.jpg" alt="Photo 1" class="carousel-img active">
+                <img src="./assets/images/2.jpg" alt="Photo 2" class="carousel-img">
+                <img src="./assets/images/3.jpg" alt="Photo 3" class="carousel-img">
+                <img src="./assets/images/4.jpg" alt="Photo 4" class="carousel-img">
+                <img src="./assets/images/5.jpg" alt="Photo 5" class="carousel-img">
+            </div>
+            <div class="final-message" id="finalMessage">
+                <p>To my beloved. From the very moment we laid eyes with each other. I knew that I met the woman of my dreams. My heart beats only for you. And every day spent with you is a gift, and each night I spend with you is a dream come true. Thank you for granting my wish.</p>
+                <div class="icon" id="button">
+                    <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                </div>
+            </div>
+            <div class="proposal-message" id="proposalMessage">
+                <p>Will you be my Valentine?</p>
+                <div class="button-section">
+                    <button id="yesButton">Yes</button>
+                    <button id="noButton">No</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@hiseb/confetti@2.1.0/dist/confetti.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

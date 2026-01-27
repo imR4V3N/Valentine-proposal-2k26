@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret Code Design</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/index.css">
+</head>
+<body>
+
+    <div class="heart" style="top: 10%; left: 10%;">❤</div>
+    <div class="heart" style="top: 25%; left: 80%;">❤</div>
+    <div class="heart" style="top: 70%; left: 15%;">❤</div>
+    <div class="heart" style="top: 85%; left: 85%;">❤</div>
+    <div class="heart" style="top: 50%; left: 50%;">❤</div>
+
+    <div class="container">
+        <div class="lock-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 17a2 2 0 0 0 2-2 2 2 0 0 0-2-2 2 2 0 0 0-2 2 2 2 0 0 0 2 2m6-9a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2h1V6a5 5 0 0 1 5-5 5 5 0 0 1 5 5v2h1m-6-5a3 3 0 0 0-3 3v2h6V6a3 3 0 0 0-3-3z"/></svg>
+        </div>
+
+        <h1>Enter Secret Code</h1>
+        <p class="hint">Hint: Your birth date (DDMMYY)</p>
+
+        <div class="input-display" id="display"></div>
+
+        <div class="keypad">
+            <button class="key">1</button>
+            <button class="key">2</button>
+            <button class="key">3</button>
+            <button class="key">4</button>
+            <button class="key">5</button>
+            <button class="key">6</button>
+            <button class="key">7</button>
+            <button class="key">8</button>
+            <button class="key">9</button>
+            <div style="width: 60px;"></div> <button class="key">0</button>
+            <button class="key">×</button>
+        </div>
+
+        <button class="unlock-btn" id="unlock-btn">Unlock</button>
+    </div>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
