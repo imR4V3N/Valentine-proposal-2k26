@@ -310,6 +310,7 @@ body {
 }
 
 .button-section {
+    position: relative;
     display: flex;
     gap: 20px;
 }

@@ -21,13 +21,13 @@ if (display && keys.length > 0) {
     keys.forEach(key => {
         key.addEventListener('click', () => {
             const value = key.textContent;
-            
+
             if (value === '×') {
                 code = code.slice(0, -1);
             } else {
                 code += value;
             }
-            
+
             display.textContent = '•'.repeat(code.length);
         });
     });
@@ -36,7 +36,7 @@ if (display && keys.length > 0) {
 const unlockBtn = document.getElementById('unlock-btn');
 if (unlockBtn) {
     unlockBtn.addEventListener('click', () => {
-        const secretCode = '220203'; 
+        const secretCode = '220203';
         if (code === secretCode) {
             sessionStorage.setItem('valentineAccess', 'granted');
             window.location.href = 'main.html';
@@ -46,7 +46,7 @@ if (unlockBtn) {
                 code = '';
                 display.textContent = '';
             });
-            
+
             setTimeout(() => {
                 keys.forEach(key => {
                     key.classList.remove('incorrect');
@@ -64,10 +64,10 @@ let carouselInterval = null;
 if (envelope) {
     envelope.addEventListener('click', (e) => {
         e.stopPropagation();
-        
+
         if (envelope) {
             envelope.classList.toggle('open');
-            
+
             if (envelope.classList.contains('open')) {
                 setTimeout(() => {
                     if (carousel) {
@@ -76,7 +76,7 @@ if (envelope) {
                     }
                 }, 1000);
             } else {
-                
+
                 if (carousel) {
                     carousel.classList.remove('show');
                     stopCarousel();
@@ -91,18 +91,18 @@ function startCarousel() {
     const finalMessage = document.getElementById('finalMessage');
     let currentIndex = 0;
     let cycleCount = 0;
-    
+
     if (images.length === 0) return;
-    
+
     carouselInterval = setInterval(() => {
         images[currentIndex].classList.remove('active');
         currentIndex = (currentIndex + 1) % images.length;
         images[currentIndex].classList.add('active');
-        
+
         if (currentIndex === 0) {
             cycleCount++;
         }
-        
+
         if (cycleCount === 1 && currentIndex === 0) {
             setTimeout(() => {
                 if (finalMessage) {
@@ -111,7 +111,7 @@ function startCarousel() {
                 stopCarousel();
             }, 0);
         }
-    }, 2000);
+    }, 0);
 }
 
 function stopCarousel() {
@@ -129,11 +129,11 @@ const proposalMessage = document.getElementById('proposalMessage');
 if (iconButton) {
     iconButton.addEventListener('click', (e) => {
         e.stopPropagation();
-        
+
         if (finalMessage) {
             finalMessage.classList.remove('show');
         }
-        
+
         if (proposalMessage) {
             setTimeout(() => {
                 proposalMessage.classList.add('show');
@@ -155,7 +155,7 @@ if (yesBtn) {
                 origin: { y: 0.6 },
                 colors: ['#ff1493', '#ff69b4', '#ff85c1', '#ffc0cb', '#e60072']
             });
-            
+
             setTimeout(() => {
                 confetti({
                     particleCount: 100,
@@ -165,7 +165,7 @@ if (yesBtn) {
                     colors: ['#ff1493', '#ff69b4', '#ff85c1', '#ffc0cb', '#e60072']
                 });
             }, 250);
-            
+
             setTimeout(() => {
                 confetti({
                     particleCount: 100,
@@ -181,5 +181,14 @@ if (yesBtn) {
             window.location.href = 'index.html';
             // location.reload();
         }, 5000);
+    });
+}
+
+if (noBtn) {
+    noBtn.addEventListener('mouseover', () => {
+        const offsetX = Math.floor(Math.random() * 150) - 100;
+        const offsetY = Math.floor(Math.random() * 150) - 100;
+
+        noBtn.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
     });
 }
