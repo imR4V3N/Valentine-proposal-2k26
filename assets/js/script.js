@@ -111,7 +111,7 @@ function startCarousel() {
                 stopCarousel();
             }, 0);
         }
-    }, 0);
+    }, 1500);
 }
 
 function stopCarousel() {
